@@ -188,6 +188,49 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "pformat",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
+        "documentation": {}
+    },
+    {
+        "label": "jmespath",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "jmespath",
+        "description": "jmespath",
+        "isExtraImport": true,
+        "detail": "jmespath",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "core.asgi",
@@ -399,7 +442,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nAWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -408,7 +451,106 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'users.UserAccount'",
+        "peekOfCode": "AUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nAWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nAWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nAWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_SES_ACCESS_KEY_ID",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_SES_SECRET_ACCESS_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_REGION_NAME",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_DEFAULT_REGION",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_SES_REGION_ENDPOINT",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AWS_SES_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_SES_V2",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "USE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DOMAIN",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "DOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SITE_NAME",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SITE_NAME = getenv('SITE_NAME')",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -464,6 +606,15 @@
         "description": "users.models",
         "peekOfCode": "class UserAccount(AbstractBaseUser, PermissionsMixin):\n    first_name = models.CharField(max_length=255)\n    last_name = models.CharField(max_length=255)\n    email = models.EmailField(unique=True, max_length=255)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_superuser = models.BooleanField(default=False)\n    objects = UserAccountManager()\n    USERNAME_FIELD = \"email\"\n    REQUIRED_FIELDS = ['first_name', 'last_name']",
         "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "venv.Scripts.jp",
+        "description": "venv.Scripts.jp",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('expression')\n    parser.add_argument('-f', '--filename',\n                        help=('The filename containing the input data.  '\n                              'If a filename is not given then data is '\n                              'read from stdin.'))\n    parser.add_argument('--ast', action='store_true',\n                        help=('Pretty print the AST, do not search the data.'))\n    args = parser.parse_args()",
+        "detail": "venv.Scripts.jp",
         "documentation": {}
     },
     {
