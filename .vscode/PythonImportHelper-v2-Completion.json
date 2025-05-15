@@ -99,6 +99,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -139,6 +147,30 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "JWTAuthentication",
+        "importPath": "rest_framework_simplejwt.authentication",
+        "description": "rest_framework_simplejwt.authentication",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.authentication",
+        "documentation": {}
+    },
+    {
         "label": "AbstractBaseUser",
         "importPath": "django.contrib.auth.models",
         "description": "django.contrib.auth.models",
@@ -171,11 +203,51 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenVerifyView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
         "documentation": {}
     },
     {
@@ -289,7 +361,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'djoser',\n    'users',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'corsheaders',\n    'rest_framework',\n    'djoser',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -298,7 +370,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'core.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -379,7 +451,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -388,7 +460,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -397,7 +469,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -406,7 +478,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -415,7 +487,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}\nDJOSER = {",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}\nDJOSER = {",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -424,7 +496,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}\nDJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}\nDJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -433,7 +505,88 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activatation/{uid}/{token}',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'PASSWORD_RESET_CONFIRM_RETYPE': True,\n    'TOKEN_MODEL': None\n}\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "peekOfCode": "DJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activatation/{uid}/{token}',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'PASSWORD_RESET_CONFIRM_RETYPE': True,\n    'TOKEN_MODEL': None\n}\nAUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_ACCESS_MAX_AGE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_REFRESH_MAX_AGE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_SECURE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_HTTP_ONLY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_PATH",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_COOKIE_SAMESITE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nAWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -559,7 +712,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include('djoser.urls')),\n    path('api/', include('djoser.urls.jwt')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/', include('djoser.urls')),\n    path('api/', include('users.urls')),\n]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -591,6 +744,15 @@
         "documentation": {}
     },
     {
+        "label": "CustomJWTAuthentication",
+        "kind": 6,
+        "importPath": "users.authentication",
+        "description": "users.authentication",
+        "peekOfCode": "class CustomJWTAuthentication(JWTAuthentication):\n    def authenticate(self, request):\n        try:\n            header = self.get_header(request)\n            if header is None:\n                raw_token = request.COOKIES.get(settings.AUTH_COOKIE)\n            else:\n                raw_token = self.get_raw_token(header)\n            if raw_token is None:\n                return None",
+        "detail": "users.authentication",
+        "documentation": {}
+    },
+    {
         "label": "UserAccountManager",
         "kind": 6,
         "importPath": "users.models",
@@ -606,6 +768,51 @@
         "description": "users.models",
         "peekOfCode": "class UserAccount(AbstractBaseUser, PermissionsMixin):\n    first_name = models.CharField(max_length=255)\n    last_name = models.CharField(max_length=255)\n    email = models.EmailField(unique=True, max_length=255)\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    is_superuser = models.BooleanField(default=False)\n    objects = UserAccountManager()\n    USERNAME_FIELD = \"email\"\n    REQUIRED_FIELDS = ['first_name', 'last_name']",
         "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "users.urls",
+        "description": "users.urls",
+        "peekOfCode": "urlpatterns = [\n    path('jwt/create/', CustomTokenObtainPairView.as_view()),\n    path('jwt/refresh/', CustomTokenRefreshView.as_view()),\n    path('jwt/verify/', CustomTokenVerifyView.as_view()),\n    path('logout/', LogoutView.as_view()),\n]",
+        "detail": "users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenObtainPairView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class CustomTokenObtainPairView(TokenObtainPairView):\n    def post(self, request, *args, **kwargs):\n        response = super().post(request, *args, **kwargs)\n        if response.status_code == 200:\n            access_token = response.data['access']\n            refresh_token = response.data['refresh']\n            response.set_cookie(\n                'access',\n                access_token,\n                max_age=settings.AUTH_COOKIE_ACCESS_MAX_AGE,",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenRefreshView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class CustomTokenRefreshView(TokenRefreshView):\n    def post(self, request, *args, **kwargs):\n        refresh_token = request.COOKIES.get('refresh')\n        if refresh_token:\n            request.data['refresh'] = refresh_token\n        response = super().post(request, *args, **kwargs)\n        if response.status_code == 200:\n            access_token = response.data.get('access')\n            response.set_cookie(\n                'access',",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "CustomTokenVerifyView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class CustomTokenVerifyView(TokenVerifyView):\n    def post(self, request, *args, **kwargs):\n        access_token = request.COOKIES.get('access')\n        if access_token:\n            request.data['token'] = access_token\n        return super().post(request, *args, **kwargs)\nclass LogoutView(APIView):\n    def post(self, request, *args, **kwargs):\n        response = Response(status=status.HTTP_204_NO_CONTENT)\n        response.delete_cookie('access')",
+        "detail": "users.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class LogoutView(APIView):\n    def post(self, request, *args, **kwargs):\n        response = Response(status=status.HTTP_204_NO_CONTENT)\n        response.delete_cookie('access')\n        response.delete_cookie('refresh')\n        return response",
+        "detail": "users.views",
         "documentation": {}
     },
     {
