@@ -107,6 +107,14 @@
         "documentation": {}
     },
     {
+        "label": "re_path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -224,6 +232,14 @@
         "description": "rest_framework",
         "isExtraImport": true,
         "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "ProviderAuthView",
+        "importPath": "djoser.social.views",
+        "description": "djoser.social.views",
+        "isExtraImport": true,
+        "detail": "djoser.social.views",
         "documentation": {}
     },
     {
@@ -370,7 +386,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'social_django.middleware.SocialAuthExceptionMiddleware',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -397,7 +413,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'core.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    \"default\": dj_database_url.config(\n        default=getenv(\"DATABASE_URL\"),\n        conn_max_age=600,\n        conn_health_checks=True,\n    )\n}",
+        "peekOfCode": "WSGI_APPLICATION = 'core.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {\n#     \"default\": dj_database_url.config(\n#         default=getenv(\"DATABASE_URL\"),\n#         conn_max_age=600,\n#         conn_health_checks=True,\n#     )\n# }",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -406,7 +422,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": dj_database_url.config(\n        default=getenv(\"DATABASE_URL\"),\n        conn_max_age=600,\n        conn_health_checks=True,\n    )\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': getenv('DATABASE_ENGINE'),\n        'NAME': getenv('DATABASE_NAME'),\n        'USER': getenv('DATABASE_USER'),\n        'PASSWORD': getenv('DATABASE_PASSWORD'),\n        'HOST': getenv('DATABASE_HOST'),\n        'PORT': getenv('DATABASE_PORT'),\n        'ATOMIC_REQUESTS': True\n    }",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -433,7 +449,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -442,7 +458,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -451,7 +467,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -460,7 +476,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',\n    'django.contrib.auth.backends.ModelBackend',\n]\nREST_FRAMEWORK = {",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -469,7 +485,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static'\nMEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',\n    'django.contrib.auth.backends.ModelBackend',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -478,7 +494,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}",
+        "peekOfCode": "MEDIA_URL = 'media/'\nMEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',\n    'django.contrib.auth.backends.ModelBackend',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -487,7 +503,16 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',\n    ]\n}\nDJOSER = {",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nAUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',\n    'django.contrib.auth.backends.ModelBackend',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTHENTICATION_BACKENDS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    'social_core.backends.google.GoogleOAuth2',\n    'social_core.backends.github.GithubOAuth2',\n    'django.contrib.auth.backends.ModelBackend',\n]\nREST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': [\n        'users.authentication.CustomJWTAuthentication',\n    ],\n    'DEFAULT_PERMISSION_CLASSES': [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -505,7 +530,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activatation/{uid}/{token}',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'PASSWORD_RESET_CONFIRM_RETYPE': True,\n    'TOKEN_MODEL': None\n}\nAUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues",
+        "peekOfCode": "DJOSER = {\n    'PASSWORD_RESET_CONFIRM_URL': 'password-reset/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activation/{uid}/{token}',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'PASSWORD_RESET_CONFIRM_RETYPE': True,\n    'TOKEN_MODEL': None,\n    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': getenv('REDIRECT_URLS').split(',')\n}\nAUTH_COOKIE = 'access'",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -514,7 +539,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True",
+        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -523,7 +548,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type",
+        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -532,7 +557,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -541,7 +566,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -550,7 +575,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'",
+        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -559,7 +584,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings",
+        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -568,7 +593,79 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'None'\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'",
+        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GOOGLE_OAUTH2_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GITHUB_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GITHUB_SECRET",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GITHUB_SCOPE",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -757,7 +854,7 @@
         "kind": 6,
         "importPath": "users.models",
         "description": "users.models",
-        "peekOfCode": "class UserAccountManager(BaseUserManager):\n    def create_user(self, email, first_name, last_name, password=None):\n        if not email:\n            raise ValueError('Users must have an email address')\n        email = self.normalize_email(email)\n        email = email.lower()\n        user = self.model(\n            email=email,\n            first_name=first_name,\n            last_name=last_name",
+        "peekOfCode": "class UserAccountManager(BaseUserManager):\n    def create_user(self, email, password=None, first_name='', last_name='', **extra_fields):\n        if not email:\n            raise ValueError('Users must have an email address')\n        email = self.normalize_email(email)\n        email = email.lower()\n        user = self.model(\n            email=email,\n            first_name=first_name,\n            last_name=last_name,",
         "detail": "users.models",
         "documentation": {}
     },
@@ -775,8 +872,17 @@
         "kind": 5,
         "importPath": "users.urls",
         "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path('jwt/create/', CustomTokenObtainPairView.as_view()),\n    path('jwt/refresh/', CustomTokenRefreshView.as_view()),\n    path('jwt/verify/', CustomTokenVerifyView.as_view()),\n    path('logout/', LogoutView.as_view()),\n]",
+        "peekOfCode": "urlpatterns = [\n    re_path(\n        r'^o/(?P<provider>\\S+)/$',\n        CustomProviderAuthView.as_view(),\n        name='provider-auth'\n    ),\n    path('jwt/create/', CustomTokenObtainPairView.as_view()),\n    path('jwt/refresh/', CustomTokenRefreshView.as_view()),\n    path('jwt/verify/', CustomTokenVerifyView.as_view()),\n    path('logout/', LogoutView.as_view()),",
         "detail": "users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "CustomProviderAuthView",
+        "kind": 6,
+        "importPath": "users.views",
+        "description": "users.views",
+        "peekOfCode": "class CustomProviderAuthView(ProviderAuthView):\n    def post(self, request, *args, **kwargs):\n        response = super().post(request, *args, **kwargs)\n        if response.status_code == 201:\n            access_token = response.data.get('access')\n            refresh_token = response.data.get('refresh')\n            response.set_cookie(\n                'access',\n                access_token,\n                max_age=settings.AUTH_COOKIE_MAX_AGE,",
+        "detail": "users.views",
         "documentation": {}
     },
     {
