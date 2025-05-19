@@ -1,9 +1,12 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useLoginMutation } from "@/redux/features/authApiSlice";
 import { useRouter } from "next/navigation";
+import { useAppDispatch } from "@/redux/hooks";
+import { setAuth } from "@/redux/features/authSlice";
 import { toast } from "react-toastify";
 
 export default function useLogin() {
+  const dispatch = useAppDispatch();
   const router = useRouter();
   const [login, { isLoading }] = useLoginMutation();
 
@@ -30,6 +33,7 @@ export default function useLogin() {
     })
       .unwrap()
       .then(() => {
+        dispatch(setAuth());
         toast.success("Logged in");
         router.push("/dashboard");
       })

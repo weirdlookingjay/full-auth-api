@@ -530,7 +530,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')",
+        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -539,7 +539,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [",
+        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -548,7 +548,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',",
+        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -557,7 +557,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',",
+        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -566,7 +566,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'",
+        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -575,7 +575,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]",
+        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -584,7 +584,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'None'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']",
+        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -719,7 +719,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_SES_ACCESS_KEY_ID = getenv('AWS_SES_ACCESS_KEY_ID')\nAWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -728,7 +728,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_SES_SECRET_ACCESS_KEY = getenv('AWS_SES_SECRET_ACCESS_KEY')\nAWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -737,7 +737,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_REGION_NAME = getenv('AWS_REGION_NAME')\nAWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -746,7 +746,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_DEFAULT_REGION = getenv('AWS_DEFAULT_REGION')\nAWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -755,7 +755,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_SES_REGION_ENDPOINT = f'email.{AWS_REGION_NAME}.amazonaws.com'\nAWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -764,7 +764,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "AWS_SES_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')\nUSE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -773,7 +773,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "USE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "USE_SES_V2 = True\nDOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -782,7 +782,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "DOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "DOMAIN = getenv('DOMAIN')\nSITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -791,7 +791,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SITE_NAME = getenv('SITE_NAME')",
+        "peekOfCode": "SITE_NAME = getenv('SITE_NAME')\n# print(\"AUTH_COOKIE_SECURE:\", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))\n# print(\"AUTH_COOKIE_SAMESITE:\", AUTH_COOKIE_SAMESITE)",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -899,7 +899,7 @@
         "kind": 6,
         "importPath": "backend.users.views",
         "description": "backend.users.views",
-        "peekOfCode": "class CustomTokenVerifyView(TokenVerifyView):\n    def post(self, request, *args, **kwargs):\n        access_token = request.COOKIES.get('access')\n        if access_token:\n            request.data['token'] = access_token\n        return super().post(request, *args, **kwargs)\nclass LogoutView(APIView):\n    def post(self, request, *args, **kwargs):\n        response = Response(status=status.HTTP_204_NO_CONTENT)\n        response.delete_cookie('access')",
+        "peekOfCode": "class CustomTokenVerifyView(TokenVerifyView):\n    def post(self, request, *args, **kwargs):\n        access_token = request.COOKIES.get('access')\n        if access_token:\n            # Make request.data mutable if necessary\n            if hasattr(request.data, '_mutable'):\n                request.data._mutable = True\n            request.data['token'] = access_token\n            if hasattr(request.data, '_mutable'):\n                request.data._mutable = False",
         "detail": "backend.users.views",
         "documentation": {}
     },

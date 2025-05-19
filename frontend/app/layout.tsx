@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Full Auth",
-  description: "Fukk Auth application that provides jwt authentication",
+  description: "Full Auth application that provides jwt authentication",
 };
 
 export default function RootLayout({

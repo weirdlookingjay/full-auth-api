@@ -182,7 +182,7 @@ AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day
 AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'
 AUTH_COOKIE_HTTP_ONLY = 'True'
 AUTH_COOKIE_PATH = '/'
-AUTH_COOKIE_SAMESITE = 'None'
+AUTH_COOKIE_SAMESITE = 'Lax'
 
 # https://python-social-auth.readthedocs.io/en/latest/backends/github.html
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')
@@ -229,3 +229,5 @@ USE_SES_V2 = True
 
 DOMAIN = getenv('DOMAIN')
 SITE_NAME = getenv('SITE_NAME')
+# print("AUTH_COOKIE_SECURE:", AUTH_COOKIE_SECURE, type(AUTH_COOKIE_SECURE))
+# print("AUTH_COOKIE_SAMESITE:", AUTH_COOKIE_SAMESITE)

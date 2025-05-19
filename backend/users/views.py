@@ -126,7 +126,12 @@ class CustomTokenVerifyView(TokenVerifyView):
         access_token = request.COOKIES.get('access')
 
         if access_token:
+            # Make request.data mutable if necessary
+            if hasattr(request.data, '_mutable'):
+                request.data._mutable = True
             request.data['token'] = access_token
+            if hasattr(request.data, '_mutable'):
+                request.data._mutable = False
 
         return super().post(request, *args, **kwargs)
 
