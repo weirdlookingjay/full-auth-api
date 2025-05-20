@@ -899,7 +899,7 @@
         "kind": 6,
         "importPath": "backend.users.views",
         "description": "backend.users.views",
-        "peekOfCode": "class CustomTokenVerifyView(TokenVerifyView):\n    def post(self, request, *args, **kwargs):\n        access_token = request.COOKIES.get('access')\n        if access_token:\n            # Make request.data mutable if necessary\n            if hasattr(request.data, '_mutable'):\n                request.data._mutable = True\n            request.data['token'] = access_token\n            if hasattr(request.data, '_mutable'):\n                request.data._mutable = False",
+        "peekOfCode": "class CustomTokenVerifyView(TokenVerifyView):\n    def post(self, request, *args, **kwargs):\n        access_token = request.COOKIES.get('access')\n        # if access token:\n        if not access_token:\n            return Response({'detail': 'Not authenticated'}, status=status.HTTP_401_UNAUTHORIZED)\n        # Make request.data mutable if necessary\n        if hasattr(request.data, '_mutable'):\n            request.data._mutable = True\n        request.data['token'] = access_token",
         "detail": "backend.users.views",
         "documentation": {}
     },

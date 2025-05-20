@@ -15,7 +15,7 @@ const Navbar = () => {
   const [logout] = useLogoutMutation();
   const { isAuthenticated, isLoading } = useAppSelector(state => state.auth);
 
- 
+
   // Helper functions
   const handleLogout = () => {
     logout(undefined).unwrap().then(() => {
@@ -63,7 +63,11 @@ const Navbar = () => {
     </>
   );
 
-  if (isLoading) {
+  // Only show skeleton on protected routes
+  const protectedRoutes = ['/dashboard'];
+  const isProtected = protectedRoutes.some(route => pathname.startsWith(route));
+
+  if (isLoading && isProtected) {
     // Skeleton for banner and two links
     return (
       <nav className="bg-gray-800">
@@ -86,7 +90,7 @@ const Navbar = () => {
     );
   }
 
- 
+
 
   return (
     <Disclosure as="nav" className="bg-gray-800">

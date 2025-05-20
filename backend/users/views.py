@@ -9,7 +9,6 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView
 )
 
-
 class CustomProviderAuthView(ProviderAuthView):
     def post(self, request, *args, **kwargs):
         response = super().post(request, *args, **kwargs)
@@ -125,15 +124,19 @@ class CustomTokenVerifyView(TokenVerifyView):
     def post(self, request, *args, **kwargs):
         access_token = request.COOKIES.get('access')
 
-        if access_token:
-            # Make request.data mutable if necessary
-            if hasattr(request.data, '_mutable'):
-                request.data._mutable = True
-            request.data['token'] = access_token
-            if hasattr(request.data, '_mutable'):
-                request.data._mutable = False
+        # if access token:
+        if not access_token:
+            return Response({'detail': 'Not authenticated'}, status=status.HTTP_401_UNAUTHORIZED)
+
+        # Make request.data mutable if necessary
+        if hasattr(request.data, '_mutable'):
+            request.data._mutable = True
+        request.data['token'] = access_token
+        if hasattr(request.data, '_mutable'):
+            request.data._mutable = False
 
         return super().post(request, *args, **kwargs)
+
 
 
 class LogoutView(APIView):
