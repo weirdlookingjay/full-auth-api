@@ -530,7 +530,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')",
+        "peekOfCode": "AUTH_COOKIE = 'access'\nAUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = False  # Always False for localhost/HTTP\nAUTH_COOKIE_HTTP_ONLY = True\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -539,7 +539,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [",
+        "peekOfCode": "AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues\nAUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = False  # Always False for localhost/HTTP\nAUTH_COOKIE_HTTP_ONLY = True\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -548,7 +548,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',",
+        "peekOfCode": "AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day\nAUTH_COOKIE_SECURE = False  # Always False for localhost/HTTP\nAUTH_COOKIE_HTTP_ONLY = True\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -557,7 +557,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'\nAUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',",
+        "peekOfCode": "AUTH_COOKIE_SECURE = False  # Always False for localhost/HTTP\nAUTH_COOKIE_HTTP_ONLY = True\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -566,7 +566,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = 'True'\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'",
+        "peekOfCode": "AUTH_COOKIE_HTTP_ONLY = True\nAUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -575,7 +575,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]",
+        "peekOfCode": "AUTH_COOKIE_PATH = '/'\nAUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -584,7 +584,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'Lax'\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']",
+        "peekOfCode": "AUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin\n# https://python-social-auth.readthedocs.io/en/latest/backends/github.html\nSOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = getenv('GOOGLE_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [\n    'https://www.googleapis.com/auth/userinfo.email',\n    'https://www.googleapis.com/auth/userinfo.profile',\n    'openid'\n]\nSOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -620,7 +620,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True",
+        "peekOfCode": "SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']\nSOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -629,7 +629,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')\nSOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',\n]",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -638,7 +638,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')\nSOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',\n]\nCORS_ALLOW_CREDENTIALS = True",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -647,7 +647,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_SCOPE = ['email']\nSOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',\n]\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -656,7 +656,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "SOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'",
+        "peekOfCode": "SOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {\n    'fields': 'email, forst_name, last_name'\n}\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',\n]\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
         "detail": "backend.core.settings",
         "documentation": {}
     },
@@ -665,7 +665,7 @@
         "kind": 5,
         "importPath": "backend.core.settings",
         "description": "backend.core.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = getenv(\n    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings\nEMAIL_BACKEND = 'django_ses.SESBackend'\nDEFAULT_FROM_EMAIL = getenv('AWS_SES_FROM_EMAIL')",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n    'http://127.0.0.1:3000',\n]\nCORS_ALLOW_CREDENTIALS = True\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'users.UserAccount'\n# Email Settings",
         "detail": "backend.core.settings",
         "documentation": {}
     },

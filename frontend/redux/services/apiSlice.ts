@@ -39,6 +39,12 @@ const baseQueryWithReauth: BaseQueryFn<
           result = await baseQuery(args, api, extraOptions);
         } else {
           api.dispatch(logout());
+          return {
+            error: {
+              status: 401,
+              data: "Refresh failed",
+            },
+          };
         }
       } finally {
         release();

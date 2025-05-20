@@ -179,10 +179,10 @@ DJOSER = {
 AUTH_COOKIE = 'access'
 AUTH_COOKIE_ACCESS_MAX_AGE = 60 * 5  # 5 minues
 AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24  # 1 day
-AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'False') == 'True'
-AUTH_COOKIE_HTTP_ONLY = 'True'
+AUTH_COOKIE_SECURE = False  # Always False for localhost/HTTP
+AUTH_COOKIE_HTTP_ONLY = True
 AUTH_COOKIE_PATH = '/'
-AUTH_COOKIE_SAMESITE = 'Lax'
+AUTH_COOKIE_SAMESITE = 'Lax'  # 'Lax' is safest for localhost, use 'None' only if cross-origin
 
 # https://python-social-auth.readthedocs.io/en/latest/backends/github.html
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = getenv('GOOGLE_AUTH_KEY')
@@ -201,10 +201,10 @@ SOCIAL_AUTH_GITHUB_PRFILE_EXTRA_PARAMS = {
     'fields': 'email, forst_name, last_name'
 }
 
-
-CORS_ALLOWED_ORIGINS = getenv(
-    'CORS_ALLOWED_ORIGINS', 'http://localhost:3000, http://127.0.0.1:3000').split(',')
-
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
 CORS_ALLOW_CREDENTIALS = True
 
 # Default primary key field type
